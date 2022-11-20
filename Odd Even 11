@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr= new int[n];
+        for(int i=0; i<n; i++){
+            arr[i] = scn.nextInt();
+        }
+        int temp1=0, temp2=0, temp3=0,temp4=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]%2==0){
+                //System.out.print(arr[i]+" "+"\n");
+                temp1 = temp1*10+arr[i];
+            }else
+                temp2 = temp2*10+arr[i];
+        }
+        for(int j=temp1; j>0; j=j/10){
+            int m = j%10;
+            temp3 = temp3*10+m;
+        }
+        for(int k=temp2; k>0; k=k/10){
+            int l = k%10;
+            temp4 = temp4*10+l;
+        }
+        for(int p=temp4; p>0; p=p/10){
+            int fun = p%10;
+            System.out.print(fun+" ");
+        }
+        System.out.println();
+        for(int q=temp3; q>0; q=q/10){
+            int fun2 = q%10;
+            System.out.print(fun2+" ");
+        }
+         // System.out.println(temp3);
+         // System.out.println(temp4);
+    }
+}
