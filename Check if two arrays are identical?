@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr1 = new int[n];
+        for(int i=0; i<n; i++){
+            arr1[i]= scn.nextInt();
+        }
+        int m = scn.nextInt();
+        int[] arr2 = new int[m];
+        for(int j=0; j<n; j++){
+            arr2[j]=scn.nextInt();
+        }
+        if(n==m){
+            System.out.println(true);
+            return;
+        }
+        for(int i=0; i<m; i++){
+            if(arr1[i]==arr2[i]){
+                System.out.println(true);
+            }
+        }
+        System.out.println(false);
+    }
+}
