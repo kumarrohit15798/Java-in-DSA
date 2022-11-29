@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static void update(int[] arr, int traget, int left, int right,int n){
+        for(int i=0; i<n; i++){
+            if(i>=left && i<=right) arr[i]=traget;
+        }
+        for(int x: arr) System.out.print(x+" ");
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i<n; i++) arr[i] = scn.nextInt();
+        int left = scn.nextInt();
+        int right = scn.nextInt();
+        int traget = scn.nextInt();
+        update(arr, traget,left,right, n);
+    }
+}
